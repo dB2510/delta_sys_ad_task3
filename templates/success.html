@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div id="log"><a href="{{url_for('login') }}">Login </a></div>
+Yo {{ result['fullname'] }}! you has been Registered!
+<br>
+Click the login button above to login
+{% endblock %}

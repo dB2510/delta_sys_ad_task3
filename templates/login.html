@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+	<div id="sig"><h1><b>Sign In</b></h1></div>
+	<form action="" method="post" onsubmit="mainf()">
+	<p>Username:</p>
+	<input id="user" type="textbox" name="username" size="40" placeholder="enter user id"></input>
+	<br>
+	<p>Password:</p>
+	<input type="password" name="password" size="40" placeholder="enter password"></input>
+	<br>
+	Remember Me<input id="rem" type="checkbox" name="remember" unchecked>
+	<br>
+	<input type="submit">
+	</form>
+{% endblock %}

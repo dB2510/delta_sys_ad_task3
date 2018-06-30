@@ -1,0 +1,13 @@
+'{% extends "base.html" %}
+
+{% block content %}
+	<div id="sig"><h1><b>Sign In</b></h1></div>
+	<form action="" method="post">
+	<p>Username:</p>
+	<input type="textbox" name="username" size="40" placeholder="enter user id"></input>
+	<br>
+	<p>Password:</p>
+	<input type="password" name="password" size="40" placeholder="enter password"></input>
+	<br><br>
+	<input type="submit">
+{% endblock %}

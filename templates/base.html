@@ -1,0 +1,23 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+<title>yo</title>
+</head>
+<body>
+<div>
+            Hey there!     
+<a href="{{url_for('index') }}">Home</a><br>
+Not an user yet?
+<a href="{{url_for('register') }}">Register</a>
+{% if session or f==1 %}
+<div id="log"><a href="{{url_for('logout') }}">Logout </a></div>
+{% else %}
+<div id="log"><a href="{{url_for('login') }}">Login </a></div>
+{% endif %}
+<br>
+<hr>
+<script type="text/javascript" src="{{ url_for('static',filename='scripts/script.js') }}"></script>
+{% block content %}{% endblock %}	 
+ 
+</body>
+</html>

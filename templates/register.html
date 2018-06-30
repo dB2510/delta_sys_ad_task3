@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <div id="sig"><h1><b>Register</b></h1></div>
+        <form name="regform" action="" method="post" onsubmit="return validate()">
+       <div id="username"> <p>Username:</p>
+        <input type="textbox" name="username" size="40" placeholder="enter user id"></input>
+        <br></div>
+       <div id="fullname"> <p>Full Name:</p>
+	<input type="textbox" name="fullname" size="40" placeholder="enter your full name">
+	<br></div>
+	<div id="email"><p>Email id:</p>
+	<input type="textbox" name="email" size="40" placeholder="enter valid email id">
+	<br></div>
+       <div id="password"><p>Password:</p>
+        <input type="password" name="password" size="40" placeholder="enter password"></input>
+        <br></div>
+       <div id="rpassword"> <p>Repeat Password:</p>
+        <input type="password" name="rpassword" size="40" placeholder="enter password"></input>
+        <br></div>
+	<br>
+        <input type="submit">
+{% endblock %}

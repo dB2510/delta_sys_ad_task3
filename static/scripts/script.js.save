@@ -1,0 +1,19 @@
+function mainf(){
+alert(document.getElementById('rem').checked);
+if(document.getElementById('rem').checked)
+{
+console.log("cookie called");
+user = document.getElementById("user").value;
+console.log('user');
+name ="userId";
+alert(user);
+document.cookie=name+"="+user+";expires=Sat,30 Jun 2018 12:00:00 UTC";
+console.log('really');
+}
+}
+
+function validate(){
+ 
+
+
+

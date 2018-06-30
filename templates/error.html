@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block content %}
+ <div id="sig"><h1><b>Register</b></h1></div>
+        <form name="regform" action="" method="post" onsubmit="return validate()">
+     	<p>Username:</p>
+        <input type="textbox" name="username" size="40" placeholder="enter user id"></input>
+        <br>
+	{% if ret == 1 %}
+	<font color="red">
+	Username must be between 5 to 10 characters
+        </font><br>
+	{% endif %}
+	<p>Full Name:</p>
+	<input type="textbox" name="fullname" size="40" placeholder="enter your full name">
+	<br>
+	{% if ret == 2 %}
+	<font color="red">
+	Fullname can't be empty
+        </font><br>
+	{% endif %}
+	<p>Email id:</p>
+	<input type="textbox" name="email" size="40" placeholder="enter valid email id">
+	{% if ret == 3 %}
+	<font color="red">
+	Enter a valid email id
+        </font><br>
+	{% endif %}
+	<p>Password:</p>
+        <input type="password" name="password" size="40" placeholder="enter password"></input>
+        <br>
+	{% if ret == 4 %}
+	<font color="red">
+	Password must contain atleast one alphabet,one digit,one special character and have a minimum length of 5
+        </font><br>
+	{% endif %}/
+	<p>Repeat Password:</p>
+        <input type="password" name="rpassword" size="40" placeholder="enter password"></input>
+        <br>
+	{% if ret == 5 %}
+	<font color="red">
+	Passwords don't match
+        </font><br>
+	{% endif %}
+	<br>
+        <input type="submit">
+{% endblock %}

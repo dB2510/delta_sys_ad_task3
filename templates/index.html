@@ -1,0 +1,22 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for r in request.cookies %}
+{% print r," wubba  ",request.cookies.get(r) %}
+<br>
+{% endfor %}
+{% if session or f==1 %}
+{% for r in count %}
+	{% for ro in r %}
+		{% if ro >1 %}
+			Hello <b>{{ user }}</b>! You have visited <b>{{ ro }}</b> times.
+		{% else %}
+			Hello <b>{{ user }}</b>! You have visited <b>{{ ro }}</b> time.
+		{% endif %}
+	{% endfor %}
+{% endfor %}
+{% else %}
+You are not logged in.
+<div id="log"><a href="{{url_for('login') }}">Login </a></div>
+{% endif %}
+{% endblock %}
