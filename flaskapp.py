@@ -91,7 +91,6 @@ def login_po():
     result = request.form
     query = "SELECT * FROM USER WHERE userName='%s'"
     user = result['username']
-    return render_template('temp.html',name=user)
     cursor.execute(query%user)
     pwd = result['password']
     res = cursor.fetchone()
